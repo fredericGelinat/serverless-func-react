@@ -19,7 +19,7 @@ exports.handler = async (event, context) => {
         if(finalProduct.error){
             return{
                 headers:{
-                    "Access-Control-Allow-Origin": "*";
+                    "Access-Control-Allow-Origin": "*",
                 },
                 statusCode:404,
                 body:`no product with id : ${id}`,
@@ -27,7 +27,7 @@ exports.handler = async (event, context) => {
         }
         return{
             headers:{
-                "Access-Control-Allow-Origin": "*";
+                "Access-Control-Allow-Origin": "*",
             },
             statusCode:200,
             body:JSON.stringify(finalProduct)
