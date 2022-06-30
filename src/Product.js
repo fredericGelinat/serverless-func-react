@@ -19,7 +19,7 @@ export const Product = () => {
     }
     useEffect(()=>{
         fetchData()
-    }, [])
+    },[])
     if(loading){
         return <section className='section section-center'>
             <h2>loading...</h2>
@@ -27,7 +27,6 @@ export const Product = () => {
     }
     const {fields} = product
     const {name, desc, price, image} =fields
-    console.log(name)
   return (
     <section className='section section-center'>
 
