@@ -27,7 +27,6 @@ export const Product = () => {
     }
     const {fields} = product
     const {name, desc, price, image} = fields
-    console.log(name)
   return (
     <section className='section section-center'>
 

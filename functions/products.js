@@ -13,7 +13,7 @@ exports.handler = async (event, context) => {
   if (id) {
     try {
         const product = await airtable.retrieve(id)
-        // const singleProduct = product.fields;
+        const singleProduct = product.fields;
         // const finalProduct ={id, ...singleProduct};
 
         if(product.error){
