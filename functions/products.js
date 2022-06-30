@@ -3,7 +3,7 @@ require('dotenv').config()
 const Airtable = require('airtable-node');
  
 const airtable = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY })
-  .base('appfi2K2z8aWrnX0U')
+  .base('appYLBb3bqKnaiGXo')
   .table('products')
 
 
@@ -13,10 +13,10 @@ exports.handler = async (event, context) => {
   if (id) {
     try {
         const product = await airtable.retrieve(id)
-        const singleProduct = product.fields;
-        const finalProduct ={id, ...singleProduct};
+        // const singleProduct = product.fields;
+        // const finalProduct ={id, ...singleProduct};
 
-        if(finalProduct.error){
+        if(product.error){
             return{
                 headers:{
                     "Access-Control-Allow-Origin": "*",

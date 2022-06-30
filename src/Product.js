@@ -17,16 +17,17 @@ export const Product = () => {
         }
         setloading(false)
     }
-    useEffect(()=>{
+    useEffect(() => {
         fetchData()
-    },[])
+    })
     if(loading){
-        return <section className='section section-center'>
+        return (<section className='section section-center'>
             <h2>loading...</h2>
-        </section>
+        </section>)
     }
     const {fields} = product
-    const {name, desc, price, image} =fields
+    const {name, desc, price, image} = fields
+    console.log(name)
   return (
     <section className='section section-center'>
 
